@@ -3,50 +3,44 @@
 int main() {
 
     char estado[30], estado2[30];
-    char codigocarta[4], codigocartas02[4];
-    char cidade[50], cidade02[50];
-    int pontosturisticos, pontosturisticos02;
-    float populacao, populacao02; 
-    float pib, pib02;
-    float area, area02;
-    
-    // DADOS DA PRIMEIRA CARTA //
+    char cod1[4], cod2[4];
+    char cidade[50], cidade2[50];
+    int pontos1, pontos2;
 
+    // CARTA 1
     printf("ESTADO: ");
     scanf("%s", estado);
 
     printf("CIDADE: ");
     scanf("%s", cidade);
 
-    printf("CODIGO DE CARTAS: ");
-    scanf("%s", codigocarta);
+    printf("CODIGO: ");
+    scanf("%s", cod1);
 
     printf("PONTOS TURISTICOS: ");
-    scanf("%d", &pontosturisticos);
+    scanf("%d", &pontos1);
 
-    // DADOS DA SEGUNDA CARTA 02 //
-
-    printf("ESTADO_02:");
-
+    // CARTA 2
+    printf("ESTADO 2: ");
     scanf("%s", estado2);
 
     printf("CIDADE: ");
-    scanf("%s", cidade02);
+    scanf("%s", cidade2);
 
-    printf("CODIGO DE CARTAS: ");
-    scanf("%s", codigocartas02);
+    printf("CODIGO: ");
+    scanf("%s", cod2);
 
     printf("PONTOS TURISTICOS: ");
-    scanf("%d", &pontosturisticos02);
+    scanf("%d", &pontos2);
 
-    printf("POPULACAO: ");
-    scanf("%f", &populacao02);
-
-    printf("PIB: ");
-    scanf("%f", &pib02);
-
-    printf("AREA EM KM²: ");
-    scanf("%f", &area02);
+    // COMPARAÇÃO
+    if (pontos1 > pontos2) {
+        printf("CARTA 1 VENCEU!\n");
+    } else if (pontos1 < pontos2) {
+        printf("CARTA 2 VENCEU!\n");
+    } else {
+        printf("EMPATE!\n");
+    }
 
     return 0;
 }
